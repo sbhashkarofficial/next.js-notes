@@ -40,7 +40,7 @@ export async function createPost(formData: FormData) {
 
 ### Invoking Server Functions
 
-We can import a Server Function into a Client Component, and can use `async/await` function to invoke it. When we write `await aServerAction(data)`, Next.js intetcepts that call, it automatically packages the data and securely sends an HTTP `POST` request to the server.
+We can import a Server Function into a Client Component, and use useEffect, event handlers or forms to invoke them. When we write `await aServerAction(data)`, Next.js intetcepts that call, it automatically packages the data and securely sends an HTTP `POST` request to the server.
 
 #### Using Event Handlers
 
@@ -55,7 +55,7 @@ export async function deletePost(){
 
 ```ts
 'use client'
-import {createPost} from '@/app/actions'
+import {deletePost} from '@/app/actions'
 
 export default function DeletePostButton(){
     const handleClick = ()=> {
